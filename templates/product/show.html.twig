@@ -7,6 +7,12 @@
 <h1>{{ product.name }}</h1>
 <p>Prix : {{ product.price }}€</p>
 <p>Description : {{ product.description }}</p>
-<a href="{{ path('app_products') }}">Retour aux produits</a>
+
+<!-- Bouton Ajouter au panier -->
+<a href="{{ path('app_cart_add', { 'id': product.id }) }}" class="btn btn-primary">🛒 Ajouter au panier</a>
+
+<!-- Bouton Retour aux produits -->
+<a href="{{ path('app_products') }}" class="btn btn-secondary">⬅ Retour aux produits</a>
+
 
 {% endblock %}

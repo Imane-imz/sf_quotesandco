@@ -44,10 +44,12 @@
             <a href="{{ path('app_product_show', { 'slug': product.slug }) }}">
                 {{ product.name }} - {{ product.price }}€
             </a>
+            <a href="{{ path('app_cart_add', { 'id': product.id }) }}" class="btn btn-primary">🛒 Ajouter au panier</a>
         </li>
     {% else %}
         <p>Aucun produit trouvé.</p>
     {% endfor %}
 </ul>
+
 
 {% endblock %}
